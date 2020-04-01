@@ -9,7 +9,7 @@ const Contact = ({name, status, image}) => {
             <h3 className = "name">{name}</h3> 
             <div className = {status}> 
             </div>
-            <p className = "status-text">{status === "online" ? "online" : "offline"}</p>
+            <p className = "status-text">{status === "status-online" ? "online" : "offline"}</p>
         </div>  
     </div>
     )
