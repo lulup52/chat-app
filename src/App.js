@@ -7,7 +7,7 @@ function App() {
     <div>
       <Contacts 
         name = "Susan Lawson"
-        status = "online"
+        status = "status-offline"
         image = "https://randomuser.me/api/portraits/men/97.jpg"
         />
     </div>

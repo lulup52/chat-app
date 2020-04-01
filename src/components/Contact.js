@@ -7,7 +7,7 @@ const Contact = ({name, status, image}) => {
         <img className ="avatar" src = {image} alt = {name}/>
         <div className = "status">
             <h3 className = "name">{name}</h3> 
-            <div className ="status-online"> 
+            <div className = {status}> 
             </div>
             <p className = "status-text">{status === "online" ? "online" : "offline"}</p>
         </div>  
