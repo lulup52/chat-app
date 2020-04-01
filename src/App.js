@@ -10,6 +10,16 @@ function App() {
         status = "status-offline"
         image = "https://randomuser.me/api/portraits/men/97.jpg"
         />
+      <Contacts 
+        name = "Sarah Holmes"
+        status = "status-online"
+        image = "https://randomuser.me/api/portraits/women/82.jpg"
+        />
+      <Contacts 
+        name = "Emily Davis"
+        status = "status-online"
+        image = "https://randomuser.me/api/portraits/women/28.jpg"
+        />
     </div>
   );
 }
