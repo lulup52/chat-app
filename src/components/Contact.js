@@ -6,7 +6,7 @@ class Contact extends React.Component {
     constructor (props){
         super(props);
         this.state = {
-            online:false
+            online: props.status
         }
     }
 
@@ -14,16 +14,13 @@ class Contact extends React.Component {
         return (
         <div className= "Contact">
             <img className ="avatar" src = {this.props.image} alt = {this.props.name}/>
-            <div className = "status">
-                <h3 className = "name">{this.props.name}</h3> 
-                <div className = {this.state.online ? "status-online" : "status-offline"}> 
-
-                </div>
-                <p className = "status-text" 
-                    onClick={event => {
+            <div className = "status"  onClick={event => {
                     const isOnline = !this.state.online;
                     this.setState({ online: isOnline })}}>
-                        {this.state.online ? "online" : "offline"}</p>
+                <h3 className = "name">{this.props.name}</h3> 
+                <div className = {this.state.online ? "status-online" : "status-offline"}> 
+                </div>
+                <p className = "status-text" >{this.state.online ? "online" : "offline"}</p>
             </div>  
         </div>
         )
