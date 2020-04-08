@@ -1,5 +1,6 @@
 import React from 'react';
 import './Contact.css';
+import PropTypes from 'prop-types';
 
 const Contact = ({name, status, image}) => {
     return (
@@ -7,12 +8,18 @@ const Contact = ({name, status, image}) => {
         <img className ="avatar" src = {image} alt = {name}/>
         <div className = "status">
             <h3 className = "name">{name}</h3> 
-            <div className = {status}> 
+            <div className = {status ? "status-online" : "status-offline"}> 
             </div>
-            <p className = "status-text">{status === "status-online" ? "online" : "offline"}</p>
+            <p className = "status-text">{status ? "online" : "offline"}</p>
         </div>  
     </div>
     )
 }
+
+Contact.propTypes = {
+    name: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    status: PropTypes.bool.isRequired,
+  };
 
 export default Contact;

@@ -1,10 +1,11 @@
 import React from 'react';
 import Contact from './Contact';
 
+
 const users = [
     {
       name: 'Robert Reyes',
-      avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
+      avatar: "https://randomuser.me/api/portraits/men/28.jpg",
       online: false
     },
     {
@@ -23,20 +24,23 @@ const users = [
       online: false
     },
     {
-      name: 'Juanita Phillips',
-      avatar: 'https://randomuser.me/api/portraits/women/55.jpg',
+      name: "brigite",
+      avatar: "https://randomuser.me/api/portraits/women/55.jpg",
       online: true
     }   
   ];
 
 const ContactList = () => (
-        users.map(contact => (
-            <Contact 
+        users.map(contact => {
+            return  <Contact
             name = {contact.name}
             image = {contact.avatar}   
-            status = {contact.online === true ? contact.online = "status-online" : contact.online = "status-offline"} />))
+            status = {contact.online} />
+          }
+        )
                      
 )
+
 
 
 export default ContactList;
